@@ -5,7 +5,7 @@ const fs = require("fs");
 
 // Enable CORS to allow cross-origin requests (useful for frontend API calls)
 app.use(cors());
-const members = JSON.parse(fs.readFileSync("backend/members.json"));
+const members = JSON.parse(fs.readFileSync('./src/backend/members.json', 'utf-8'));
 
 app.get("/members", (req, res) => {
   res.json(members);  
@@ -24,4 +24,5 @@ app.get("/members/:id", (req, res) => {
 });
 
 app.listen(5000, () => console.log("Server running on port 5000"));
+
 
