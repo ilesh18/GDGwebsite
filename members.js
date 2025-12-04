@@ -1,6 +1,5 @@
 async function loadMembers() {
-// Use your Render backend link here
-const res = await fetch("[https://two3-553c.onrender.com/members](https://two3-553c.onrender.com/members)");
+const res = await fetch("https://two3-553c.onrender.com/members");
 const members = await res.json();
 console.log(members);
 
@@ -82,3 +81,4 @@ themeBtn.innerText = "Dark Mode";
 themeBtn.innerText = "Light Mode";
 }
 };
+
