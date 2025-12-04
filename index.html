@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GDGsite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    :root{
+      --gdg-blue:#4285F4;
+      --gdg-red:#EA4335;
+      --gdg-yellow:#FBBC05;
+      --gdg-green:#34A853;
+      --glass-bg: rgba(255,255,255,0.06);
+      --glass-border: rgba(255,255,255,0.08);
+      --transition: 300ms;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 antialiased">
+
+  <header class="fixed inset-x-0 top-0 z-30 backdrop-blur-md bg-white/60 dark:bg-black/40 border-b border-black/5 dark:border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a class="flex items-center gap-3">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <path d="M7 12h10" stroke="white" stroke-width="1.4" stroke-linecap="round"></path>
+          <path d="M12 7v10" stroke="white" stroke-width="1.4" stroke-linecap="round"></path>
+        </svg>
+        <div class="leading-tight">
+          <div class="text-sm font-semibold tracking-tight">Google <span class="text-indigo-600 dark:text-indigo-300">Developers</span></div>
+          <div class="font-small text-gray-700 dark:text-gray-300" style="color: inherit">Classic · Teamwork · VIT Bhopal</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700 dark:text-gray-300">
+        <a class="hover:text-black dark:hover:text-white transition" href="https://gdg.community.dev/gdg-on-campus-vellore-institute-of-technology-bhopal-india/">About</a>
+        <a class="hover:text-black dark:hover:text-white transition" href="#events">Events</a>
+        <a class="hover:text-black dark:hover:text-white transition" href="#projects">Projects</a>
+        <a class="hover:text-black dark:hover:text-white transition" href="https://gdg.community.dev/gdg-on-campus-vellore-institute-of-technology-bhopal-india/">Join</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="theme-btn">🌙</button>
+
+        <a href="https://gdg.community.dev/gdg-on-campus-vellore-institute-of-technology-bhopal-india/" class="hidden md:inline-block px-3 py-2 rounded-md bg-linear-to-r from-indigo-500 to-sky-500 text-xs font-semibold shadow-md hover:scale-105 transition-transform text-white">Join GDG</a>
+
+        <button id="mobile-open" class="md:hidden p-2 ml-1 rounded-md hover:bg-black/5 dark:hover:bg-white/10 transition" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative pt-20">
+    
+    <section class="relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center min-h-[72vh]">
+
+        <div class="z-10 py-8">
+          <div class="inline-flex items-center gap-3 mb-4">
+            <span class="gdg-chip" style="background:var(--gdg-blue)"></span>
+            <span class="gdg-chip" style="background:var(--gdg-red)"></span>
+            <span class="gdg-chip" style="background:var(--gdg-yellow)"></span>
+            <span class="gdg-chip" style="background:var(--gdg-green)"></span>
+            <span class="font-medium text-gray-700 dark:text-gray-300" style="color: inherit">GDEVELOPERS</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            Build, ship, and scale — <span class="bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-300 dark:to-purple-400">together</span>.
+          </h1>
+
+          <p class="mt-4 text-gray-700 dark:text-gray-300 max-w-xl">
+            Community events, hands-on workshops, and open-source projects for developers who push boundaries. We bring Google-grade tools and a gritty developer mindset to every meetup.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3 items-center">
+            <a href="#events" class="px-5 py-3 rounded-full bg-linear-to-r from-indigo-600 to-sky-500 font-semibold text-white shadow hover:scale-105 transition-transform">Upcoming Events</a>
+            <a href="members.html" class="card px-4 py-3 rounded-full border border-black/10 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-black/5 dark:hover:bg-white/10 transition">Members</a>
+          </div>
+
+          <div class="mt-6 text-sm text-gray-600 dark:text-gray-300 flex items-center gap-3">
+            <svg class="w-5 h-5 opacity-80" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <div class="typing bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-300 dark:to-purple-400 font-medium" aria-live="polite" id="type-target"></div>
+          </div>
+        </div>
+
+        <div class="relative h-80 md:h-160 lg:h-168">
+          <div id="hero-figure" class="hero-figure absolute inset-0 rounded-3xl overflow-hidden shadow-2xl">
+            <img class="hero-image" src="images/i.png" alt="GDG hero image" />
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="absolute bottom-6 left-20 w-[420px] h-[420px] rounded-full blur-3xl opacity-40" style="background: linear-gradient(135deg,var(--gdg-blue), transparent)"></div>
+              <div class="absolute top-6 right-20 w-[300px] h-[300px] rounded-full blur-3xl opacity-30" style="background: linear-gradient(135deg,var(--gdg-red), transparent)"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="h-1 rounded-full bg-linear-to-r from-indigo-700 to-sky-500 opacity-20"></div>
+      </div>
+    </section>
+
+    <section id="main-revealed" class="max-w-6xl mx-auto px-4 py-12 hidden-off" aria-hidden="true">
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="card p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5 light:border-black/10 light:bg-black/5 ">
+          <h3 class="text-lg font-semibold mb-2">GDG Workshops</h3>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Hands-on sessions: Firebase, Flutter, TensorFlow, WebPerf and more.</p>
+        </article>
+
+        <article class="card p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5">
+          <h3 class="text-lg font-semibold mb-2">Open Source Projects</h3>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Contribute to chapter tools, meetups site, and templates.</p>
+        </article>
+
+        <article class="card p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5">
+          <h3 class="text-lg font-semibold mb-2">Project Showcases</h3>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Monthly demo nights — present projects, get feedback.</p>
+        </article>
+
+      </div>
+
+      <div id="events" class="mt-12 grid md:grid-cols-2 gap-6">
+        <div class="card p-6 rounded-xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5">
+          <h4 class="font-semibold text-xl mb-2">Deep Dive: TensorFlow Lite</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Edge ML with real demos. Bring your laptop.</p>
+        </div>
+
+        <div class=" card p-6 rounded-xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/5">
+          <h4 class="font-semibold text-xl mb-2">Web Performance Clinic</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Audit your site with Lighthouse and learn optimizations.</p>
+        </div>
+      </div>
+
+      <div id="join" class="mt-12 text-center">
+        <h3 class="text-2xl font-bold">Join GDG — Build with peers</h3>
+        <p class="text-gray-700 dark:text-gray-300 mt-2">Get notified about events, mentorship and projects.</p>
+        <div class="mt-6 flex justify-center gap-4">
+          <a href="#" class="px-6 py-3 rounded-full bg-linear-to-r from-indigo-500 to-sky-500 font-semibold text-white">Get Notified</a>
+          <a href="#" class="card px-6 py-3 rounded-full border border-black/10 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition">Volunteer</a>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="mt-20 pb-12">
+      <div class="max-w-6xl mx-auto px-4 text-sm text-gray-700 dark:text-gray-400">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>   <strong>GDG Chapter</strong> • Made for Developers</div>
+          <div class="flex items-center gap-4">
+            <a href="https://policies.google.com/privacy" class=" hover:text-black text-gray-700 dark:hover:text-white" style="color: inherit">Privacy</a>
+            <a href="https://developers.google.com/community" class=" hover:text-black text-gray-700 dark:hover:text-gray-300" style="color: inherit">Code of Conduct</a>
+            <a href="https://x.com/googledevgroups" class=" hover:text-black text-gray-700 dark:hover:text-gray-300" style="color: inherit">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+<script src="index.js"></script>
+</body>
+</html>

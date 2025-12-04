@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Ilesh",
+    "role": "lead",
+    "skills":"AI, ML, Python, React",
+    "img": "max.jpg"
+  }
+  ,{
+    "id": 2,
+    "name": "rohan",
+    "role": "developer",
+    "skills":"AI, ML, Python, React",
+    "img": "max.jpg"
+  }
+
+]
