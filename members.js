@@ -1,5 +1,5 @@
 async function loadMembers() {
-  const res = await fetch("http://localhost:5000/members");
+  const res = await fetch("https://two3-553c.onrender.com");
   const members = await res.json();
   console.log(members);
 }
@@ -77,3 +77,4 @@ window.onload = () => {
     themeBtn.innerText = "Light Mode";
   }
 };
+
